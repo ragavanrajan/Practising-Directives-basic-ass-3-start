@@ -12,7 +12,9 @@ export class AppComponent {
   onToggleDetails() {
     this.showSecret = !this.showSecret;
     /* if it is zero element in the array then it will push 1 */
-    this.log.push(this.log.length + 1);
+    // this.log.push(this.log.length + 1);
+    // Javascript Date fn
+    this.log.push(new Date());
   }
 
 }

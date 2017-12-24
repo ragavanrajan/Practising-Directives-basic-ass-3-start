@@ -16,4 +16,5 @@
 <hr>
 <p *ngIf=" showSecret "> 'Secret Password = tuna'</p>
 <hr>
-<div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': logItem >= 5}">{{logItem}}</div>
+<!-- Adding index. Array lower boundary is zero  -->
+<div *ngFor="let logItem of log; let i= index" [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': i >= 5}">{{logItem}}</div>
